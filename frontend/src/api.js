@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "/api", // proxy to backend
+  baseURL: import.meta.env.VITE_API_BASE_URL || "https://jobwala-backend.vercel.app",
 });
 
 API.interceptors.request.use((req) => {
@@ -11,4 +11,7 @@ API.interceptors.request.use((req) => {
 });
 
 export default API;
+
+
+
 
