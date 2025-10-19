@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || "https://jobwala-backend.vercel.app",
+  baseURL: import.meta.env.VITE_API_BASE_URL || "https://jobwala-delta.vercel.app",
 });
 
 API.interceptors.request.use((req) => {
