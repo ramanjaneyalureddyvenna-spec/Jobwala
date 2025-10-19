@@ -1,8 +1,11 @@
 const mongoose = require('mongoose');
 
-async function connectDB(mongodb+srv://ramanjaneyalureddyvenna_db_user:CraVJmJUs7tdzRHb@cluster0.gvoauc1.mongodb.net/jobwala?retryWrites=true&w=majority {
+// Directly hardcode your MongoDB URI here
+const MONGODB_URI = "mongodb+srv://ramanjaneyalureddyvenna_db_user:CraVJmJUs7tdzRHb@cluster0.gvoauc1.mongodb.net/jobwala?retryWrites=true&w=majority";
+
+async function connectDB() {
   try {
-    await mongoose.connect(mongodb+srv://ramanjaneyalureddyvenna_db_user:CraVJmJUs7tdzRHb@cluster0.gvoauc1.mongodb.net/jobwala?retryWrites=true&w=majority, {
+    await mongoose.connect(MONGODB_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true
     });
