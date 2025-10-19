@@ -1,21 +1,21 @@
-import { useState } from "react";
-import { useAuth } from "../context/AuthContext";
-import { useNavigate } from "react-router-dom";
+import { useState } from 'react';
+import { useAuth } from '../context/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 export default function AdminLogin() {
   const { login } = useAuth();
   const navigate = useNavigate();
-  const [username, setUser] = useState("");
-  const [password, setPass] = useState("");
-  const [error, setError] = useState("");
+  const [username, setUser] = useState('');
+  const [password, setPass] = useState('');
+  const [error, setError] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       await login(username, password);
-      navigate("/admin/dashboard");
+      navigate('/admin/dashboard');
     } catch (err) {
-      setError(err.response?.data?.message || "Login failed");
+      setError(err.response?.data?.message || 'Login failed');
     }
   };
 
@@ -31,4 +31,3 @@ export default function AdminLogin() {
     </div>
   );
 }
-
