@@ -1,13 +1,13 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Home from "./pages/Home";
-import { About, JobReadyTools, Contact } from "./pages/About";
-import AdminLogin from "./pages/AdminLogin";
-import AdminDashboard from "./pages/AdminDashboard";
-import ManageJobs from "./pages/ManageJobs";
-import ManageReviews from "./pages/ManageReviews";
-import { AuthProvider, useAuth } from "./context/AuthContext";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import { About, JobReadyTools, Contact } from './pages/About';
+import AdminLogin from './pages/AdminLogin';
+import AdminDashboard from './pages/AdminDashboard';
+import ManageJobs from './pages/ManageJobs';
+import ManageReviews from './pages/ManageReviews';
+import { AuthProvider, useAuth } from './context/AuthContext';
 
 function PrivateRoute({ children }) {
   const { admin } = useAuth();
@@ -34,4 +34,3 @@ export default function App() {
     </AuthProvider>
   );
 }
-
