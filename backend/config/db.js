@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
-async function connectDB(MONGODB_URI) {
+async function connectDB(mongodb+srv://ramanjaneyalureddyvenna_db_user:CraVJmJUs7tdzRHb@cluster0.gvoauc1.mongodb.net/jobwala?retryWrites=true&w=majority {
   try {
-    await mongoose.connect(MONGODB_URI, {
+    await mongoose.connect(mongodb+srv://ramanjaneyalureddyvenna_db_user:CraVJmJUs7tdzRHb@cluster0.gvoauc1.mongodb.net/jobwala?retryWrites=true&w=majority, {
       useNewUrlParser: true,
       useUnifiedTopology: true
     });
